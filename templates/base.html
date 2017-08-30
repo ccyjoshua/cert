@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSL Certificate Checker</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+    <script type="text/javascript" src="/static/js/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/static/js/home.js"></script>
+</head>
+<body>
+    {% block logo %}{% endblock %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Type URL here..." id="keywordInput">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button" id="load"
+                                data-loading-text="Loading"
+                                onclick="searchButtonOnClick()">
+                                Search</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>

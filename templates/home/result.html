@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block logo %}
+    <p style="font-family:Arial; margin-top:20px; text-align:center"><b>SSL Certificate Checker</b></p>
+{% endblock %}
+
+{% block content %}
+    <p>
+        <table class="table table-hover">
+        <tr>
+            <th style="width:150px">Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Common Name</td>
+            <td>{{ common_name }}</td>
+        </tr>
+        <tr>
+            <td>Issuer</td>
+            <td>{{ issuer }}</td>
+        </tr>
+        <tr>
+            <td>Issue Date</td>
+            <td>{{ issue_date }}</td>
+        </tr>
+        <tr>
+            <td>Expire Date</td>
+            <td>{{ expire_date }}</td>
+        </tr>
+        <tr>
+            <td>Algorithm</td>
+            <td>{{ algorithm }}</td>
+        </tr>
+        <tr>
+            <td>SAN List</td>
+            <td>{{ san_str }}</td>
+        </tr>
+        </table>
+    </p>
+{% endblock %}
